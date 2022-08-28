@@ -1,17 +1,15 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import { createPinia } from 'pinia'
-
-import './app.less'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import { createPinia } from 'pinia';
+import '@/utils/inobounce';
+import './app.less';
 
 // Vant 桌面端适配
-import '@vant/touch-emulator'
+import '@vant/touch-emulator';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app
-  .use(router)
-  .use(createPinia())
+app.use(router).use(createPinia());
 
-app.mount('#app')
+app.mount('#app');
